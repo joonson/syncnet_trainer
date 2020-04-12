@@ -26,9 +26,12 @@ parser.add_argument('--nTestPerEpoch',  type=int, default=10000, help='');
 parser.add_argument('--nDataLoaderThread', type=int, default=4, help='');
 
 ## Training details
-parser.add_argument('--model', type=str, default="", help='Model name');
 parser.add_argument('--max_epoch', type=int, default=500, help='Maximum number of epochs');
 parser.add_argument('--temporal_stride', type=int, default=1, help='');
+
+## Model definition
+parser.add_argument('--model', type=str, default="", help='Model name');
+parser.add_argument('--nOut', type=int,  default=1024, help='Embedding size in the last FC layer');
 
 ## Learning rates
 parser.add_argument('--lr', type=float, default=0.001, help='Learning rate');
